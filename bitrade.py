@@ -1,6 +1,14 @@
 import tweepy
 import time
+from datetime import datetime
 import pandas as pd
+import matplotlib.pyplot as plt
+
+from api import BinanceAPI
+client = BinanceAPI('[API key]','[API secret]')
+from excepts import MalformedRequest, StatusUnknown, InternalError
+from requests.exceptions import ConnectionError
+from http.client import RemoteDisconnected
 
 
 consumer_key = "KnEgWcuf6TZbg3EudjGhEbUv1"
